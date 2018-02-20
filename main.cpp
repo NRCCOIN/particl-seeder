@@ -397,14 +397,14 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"mainnet-seed.particl.io", ""};
-static const string testnet_seeds[] = {"testnet-seed.particl.io", ""};
+static const string mainnet_seeds[] = {"vsyncseed.vsync.pw", ""};
+static const string testnet_seeds[] = {"vsyncseedtest.vsync.pwo", ""};
 
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("7vusex6gv5eerqi2.onion", 51738), true);
+  /*  db.Add(CService("7vusex6gv5eerqi2.onion", 51738), true);
 /*
     db.Add(CService("quf7tm4gk3xn3aee.onion", 51738), true);
     db.Add(CService("46fvsrrq75dx5vq4.onion", 51738), true);
